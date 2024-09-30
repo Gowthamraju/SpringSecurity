@@ -1,0 +1,24 @@
+
+server:
+  port : 8080
+spring:
+  profiles:
+    active : Dev
+  security:
+    user:
+      name: user
+      password: password
+  application:
+    name : springsecurity-service
+    datasource:
+       url: jdbc:h2:file:/data/demo  #location data stored to avoid loss when restart
+       username: sa
+       password: password
+    driverClassName: org.h2.Driver
+    jpa:
+     database-platform: org.hibernate.dialect.H2Dialect
+    h2:
+     console.enabled: true
+app:
+  jwt-secret: KftcuO+1fH5pbSfNdZtmwpCxJG5Eoy3fuXC6D+qSRcU=
+  jwt-expiration-milliseconds: 3600000
